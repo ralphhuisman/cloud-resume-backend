@@ -14,7 +14,7 @@ def lambda_handler(event, context):
             Key={'CounterId': 'SiteTotal'},
             UpdateExpression='ADD #count :inc',
             ExpressionAttributeNames={'#count': 'Count'},
-            ExpressionAttributeValues={':inc': Decimal(3)},
+            ExpressionAttributeValues={':inc': Decimal(2)},
             ReturnValues='UPDATED_NEW'
         )
         # Convert the Decimal object to int for JSON serialization.
